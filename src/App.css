@@ -1,0 +1,148 @@
+#app {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+}
+
+header, main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.bubble {
+  width: 145px;
+  height: 145px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.bubble .hot {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bubble .hotAction {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: #E5827A;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: transform .2s;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.bubble .hotIcon {
+  color: rgba(255, 255, 255, 0.521);
+}
+
+.bubbleAction {
+  text-align: center;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.bubbleAction strong {
+  display: block;
+  margin-top: 10px;
+}
+
+.bubbleAction .icons {
+  position: relative;
+}
+
+.bubbleAction .icons .typeIcon {
+  color: rgba(255, 255, 255, 0.521);
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  transform: translateX(150%);
+}
+
+.bubbleAction:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  border-radius: 50%;
+  background-color: #323031;
+  transition: transform .2s;
+  transform: scale(0);
+}
+
+.bubble:hover .bubbleAction:before, .bubble:hover:before, .bubble:hover .hotAction {
+  transform: scale(1);
+}
+
+footer {
+  overflow: hidden;
+  max-width: 1200px;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.342);
+}
+
+footer .compoundBubblesRow {
+  background-color: #52484d38;
+  box-shadow: 0 2px 3px 1px #323031;
+  border-radius: 10px;
+  max-height: 165px;
+  padding: 10px 0;
+  margin-top: 10px;
+}
+
+
+footer .title {
+  display: block;
+  color: white;
+  margin: 0 auto;
+  width: fit-content;
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+footer .bubble {
+  /* border: 1px solid white; */
+}
+
+footer .bubble strong.number {
+  font-size: 45px;
+  line-height: 35px;
+}
+
+
+.compoundBubbles {
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
